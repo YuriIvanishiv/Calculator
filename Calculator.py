@@ -1,16 +1,23 @@
 class Calculator:
-    def add (self, a, b):
-        return a + b
-    def subtract (self, a, b):
-        return a - b
-    def multiply (self, a, b):
-        return a * b
-    def divide (self, a, b):
-        if b == 0:
-            return "Ошибка: Деление на 0"
-        return a / b
-Calculator = Calculator()
-print(Calculator.add(7, 10))
-print(Calculator.subtract(99, 31))
-print(Calculator.multiply( 13, 2))
-print(Calculator.divide(1, 0))
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def add(self):
+        return self.a + self.b
+
+    def subtract(self):
+        return self.a - self.b
+
+    def multiply (self):
+        return self.a * self.b
+
+    def divide (self):
+        if self.b == 0:
+            return ("Неможлио поділити")
+        return self.a / self.b
+calculator = Calculator(12, 4)
+
+print(calculator.add())
+print(calculator.subtract())
+print(calculator.multiply())
+print(calculator.divide())
